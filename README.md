@@ -1,4 +1,4 @@
-async-symfony
+async-Symfony Messenger and Message Queue Tutorial
 -------------
 
 Il s'agit d'une série sur la création et la gestion de tâches d'arrière-plan asynchrones dans Symfony à l'aide du composant Messenger. Dans la partie 1, nous commencerons par examiner le problème que les files d'attente de messages asynchrones peuvent résoudre pour nous et nous verrons également ce que nous allons construire.
