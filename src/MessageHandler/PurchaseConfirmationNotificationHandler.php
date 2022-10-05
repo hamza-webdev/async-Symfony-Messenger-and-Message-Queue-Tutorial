@@ -28,7 +28,7 @@ class PurchaseConfirmationNotificationHandler implements MessageHandlerInterface
         echo '1. Creationg a PDF contract note <br>';
 
         $mpdf = new Mpdf();
-        $content = "<h1>Contrat Note for order {$notification->getOrder()->getId()}</h1>";
+        $content = "<h1>Contrat Note for order {$notification->getOrderId()}</h1>";
         $content .= '<p>Total: <b>$ 2599.99</b></p>';
 
         $mpdf->WriteHTML($content);
@@ -44,8 +44,8 @@ class PurchaseConfirmationNotificationHandler implements MessageHandlerInterface
 
         $email = (new Email())
         ->from('sales@stock.com')
-        ->to($notification->getOrder()->getBuyer()->getEmail())
-        ->subject('Contract note of order '.$notification->getOrder()->getId())
+        ->to('hamza@gmail.com')
+        ->subject('Contract note of order '.$notification->getOrderId())
         ->text('Here is your contrat note')
         ->attach($contratNotePdf, 'contrat-note.pdf')
         ;
