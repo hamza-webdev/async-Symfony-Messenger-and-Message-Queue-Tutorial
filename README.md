@@ -30,6 +30,12 @@ or
 $ symfony server:start -d
 ```
 
+Run Mailer
+
+```bash
+ symfony open:local:webmail
+````
+
 Then access the application in your browser at the given URL (<https://localhost:8000> by default).
 
 Tests
