@@ -16,10 +16,10 @@ class PurchaseConfirmationNotificationHandler implements MessageHandlerInterface
     public function __invoke(PurchaseConfirmationNotification $notification)
     {
         // 1 . Create a PDF Contract note
-        echo ' Creationg a PDF contract note';
+        echo '1. Creationg a PDF contract note <br>';
 
         //  2. Email the contract note to the buyer
-        echo 'Emailing contract note to '. $notification->getOrder()->getBuyer()->getEmail(). '<br>';
+        echo '2. Emailing contract note to '. $notification->getOrder()->getBuyer()->getEmail(). '<br>';
 
     }
 

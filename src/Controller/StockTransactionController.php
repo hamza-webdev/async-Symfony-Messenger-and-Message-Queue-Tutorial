@@ -26,7 +26,7 @@ class StockTransactionController extends AbstractController
                return new class {
                    public function getEmail(): string
                    {
-                       return 'email@example.tech';
+                       return 'email@gmail.com';
                    }
                };
            }
@@ -34,8 +34,8 @@ class StockTransactionController extends AbstractController
 
 
         // 1. Dispatch confirmation message
-         //$bus->dispatch(new PurchaseConfirmationNotification($order));
-        $bus->dispatch(new SaveOrder());
+        $bus->dispatch(new PurchaseConfirmationNotification($order));
+        //$bus->dispatch(new SaveOrder());
 
         // 2. Display confirmation to the user
         return $this->render('stocks/example.html.twig');
