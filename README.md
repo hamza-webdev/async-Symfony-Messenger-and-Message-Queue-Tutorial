@@ -36,6 +36,13 @@ Run Mailer
  symfony open:local:webmail
 ````
 
+Consume messanger
+
+````
+symfony console messenger:consume async -vv
+
+````
+
 Then access the application in your browser at the given URL (<https://localhost:8000> by default).
 
 Tests
