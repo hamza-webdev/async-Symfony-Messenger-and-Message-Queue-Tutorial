@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Message\Command\SaveOrder;
 use App\Message\PurchaseConfirmationNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

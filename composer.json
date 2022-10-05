@@ -6,7 +6,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.0.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.7",
@@ -19,6 +19,7 @@
         "symfony/flex": "^2",
         "symfony/framework-bundle": "^6.0",
         "symfony/mailer": "^6.0",
+        "symfony/maker-bundle": "^1.47",
         "symfony/messenger": "^6.0",
         "symfony/monolog-bundle": "^3.0",
         "symfony/proxy-manager-bridge": "^6.0",

@@ -25,8 +25,8 @@ framework:
         routing:
             # Route your messages to the transports
 #            'App\Message\PurchaseConfirmationNotification': async
-            'App\Message\Command\SaveOrder': sync
-            'App\Message\Event\OrderSavedEvent': async
+            # 'App\Message\Command\SaveOrder': sync
+            # 'App\Message\Event\OrderSavedEvent': async
 
 # when@test:
 #    framework:
