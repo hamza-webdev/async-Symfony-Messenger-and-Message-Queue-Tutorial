@@ -7,30 +7,31 @@ services:
         ports: [ 1025, 1080 ]
     ###< symfony/mailer ###
 
-    # database:
-    #     image: 'mysql:8.0'
-    #     volumes:
-    #         - ./mysql:/var/lib/mysql
-    #     environment:
-    #         MYSQL_ROOT_PASSWORD: password
-    #         MYSQL_DATABASE: main
-    #     ports:
-    #         - "3306"
+    database:
+        image: 'mysql:8.0'
+        volumes:
+            - ./mysql:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: main
+            MYSQL_USER: user
+        ports:
+            - "3306"
 
 
 ###> doctrine/doctrine-bundle ###
-    database:
-      image: postgres:${POSTGRES_VERSION:-14}-alpine
-      environment:
-        POSTGRES_DB: tesdb
-        # You should definitely change the password in production
-        POSTGRES_PASSWORD: password #${POSTGRES_PASSWORD:-!ChangeMe!}
-        POSTGRES_USER: test #${POSTGRES_USER:-app}
+    # database:
+    #   image: postgres:${POSTGRES_VERSION:-14}-alpine
+    #   environment:
+    #     POSTGRES_DB: tesdb
+    #     # You should definitely change the password in production
+    #     POSTGRES_PASSWORD: password #${POSTGRES_PASSWORD:-!ChangeMe!}
+    #     POSTGRES_USER: test #${POSTGRES_USER:-app}
 
-      volumes:
-        - db-data:/var/lib/postgresql/data:rw
-      ports:
-          - 15432:5432
+    #   volumes:
+    #     - db-data:/var/lib/postgresql/data:rw
+    #   ports:
+    #       - 15432:5432
         # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
         # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
