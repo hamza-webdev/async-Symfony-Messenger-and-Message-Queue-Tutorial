@@ -43,6 +43,27 @@ symfony console messenger:consume async -vv
 
 ````
 
+Message Failures and Retries
+-----
+forcer une error dans le fichier OrderSavedHandler pour bloquer la consomation des message
+// Attemt to retrieve an order from MongoDB
+throw new \RuntimeException('ORDER COULD Not BE FOUND)
+### Result
+```
+symfony console messenger:consume async -vv`
+ CRITICAL  [messenger] Error thrown while handling message App\Message\Event\OrderSavedEvent. Removing from transport after 3 retries. Error: "Handling "App\Message\Event\OrderSavedEvent" failed: ORDER COULD NOT BE FOUND bhh ...!!"
+
+
+````
+### configuration for "framework.messenger"
+
+````
+symfony console debug:config FrameworkBundle messenger
+````
+
+
+
+
 Then access the application in your browser at the given URL (<https://localhost:8000> by default).
 
 Tests
