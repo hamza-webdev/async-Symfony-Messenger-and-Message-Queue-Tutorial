@@ -19,7 +19,7 @@ class SaveOrderHandler implements MessageHandlerInterface
         // Save an order to database
         $order = 123;
 
-        echo 'Order being saved ... '. PHP_EOL;
+        echo 'Order being saved ... '. $order. PHP_EOL;
 
         // Dispatch on event message on an event bus
 
