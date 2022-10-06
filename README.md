@@ -60,7 +60,17 @@ symfony console messenger:consume async -vv`
 ````
 symfony console debug:config FrameworkBundle messenger
 ````
+# See all messages
+symfony console messenger:failed:show -vv
 
+# retry message one-by-one
+symfony console messenger:failed:retry -vv
+
+# retry specific messages
+symfony console messenger:failed:retry 20 30 --force
+
+# Remove without retrying
+symfony console messenger:failed:remove 20
 
 
 
