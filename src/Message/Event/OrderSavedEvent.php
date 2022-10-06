@@ -9,7 +9,8 @@ class OrderSavedEvent
 
     }
 
-    public function getOrderId(): int|string{
+    public function getOrderId(): int|string
+    {
 
         return $this->orderId;
     }

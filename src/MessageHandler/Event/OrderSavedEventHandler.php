@@ -16,7 +16,7 @@ class OrderSavedEventHandler implements MessageHandlerInterface
 
     }
 
-    public function __invoke(OrderSavedEvent $event)
+    public function __invoke(OrderSavedEvent $event): void
     {
         //Attempt to retrieve an order from MongoDB
         // throw new RuntimeException('ORDER COULD NOT BE FOUND bhh ...!!');

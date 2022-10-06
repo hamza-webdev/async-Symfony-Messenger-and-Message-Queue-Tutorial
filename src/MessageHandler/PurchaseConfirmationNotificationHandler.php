@@ -22,7 +22,7 @@ class PurchaseConfirmationNotificationHandler implements MessageHandlerInterface
 
     }
 
-    public function __invoke(PurchaseConfirmationNotification $notification)
+    public function __invoke(PurchaseConfirmationNotification $notification):void
     {
         // 1 . Create a PDF Contract note
         echo '1. Creationg a PDF contract note <br>';

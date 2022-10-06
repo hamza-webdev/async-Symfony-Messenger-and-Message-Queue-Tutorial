@@ -28,7 +28,8 @@ class SaveOrderHandler implements MessageHandlerInterface
 
     }
 
-    public function __invoke(SaveOrder $saveOrder){
+    public function __invoke(SaveOrder $saveOrder):void
+    {
         // Save an order to database
         $order = uniqid('bh_');
 
